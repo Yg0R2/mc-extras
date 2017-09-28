@@ -2,6 +2,7 @@ package yg0r2.extras.nether;
 
 import cpw.mods.fml.common.Mod;
 import yg0r2.extras.core.McExtrasCoreMod;
+import yg0r2.extras.nether.blocks.NetherBlockRegistry;
 
 @Mod(name = McExtrasNetherMod.MOD_NAME, modid = McExtrasNetherMod.MOD_ID, version = McExtrasNetherMod.MOD_VERSION, dependencies = McExtrasNetherMod.DEPENDENCIES)
 public final class McExtrasNetherMod extends McExtrasCoreMod {
@@ -13,5 +14,9 @@ public final class McExtrasNetherMod extends McExtrasCoreMod {
 
     @Mod.Instance(MOD_ID)
     public static McExtrasNetherMod instance;
+
+    public McExtrasNetherMod() {
+        setBlockRegistry(new NetherBlockRegistry());
+    }
 
 }
