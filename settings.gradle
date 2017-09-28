@@ -1,2 +1,3 @@
 rootProject.name = 'mc-extras'
 include 'core'
+include 'nether'
