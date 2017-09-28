@@ -1,0 +1,5 @@
+minecraft {
+    version = minecraftVersion
+
+    replace '@VERSION@', project.version
+}

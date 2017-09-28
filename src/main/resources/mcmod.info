@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mc-extras",
+  "name": "MC Extras",
+  "description": "This mod adds new recipes and items and blocks.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Yg0R2"],
+  "credits": "Add new recipes and items and blocks.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
