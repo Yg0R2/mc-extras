@@ -1,3 +1,4 @@
 dependencies {
-    compile project(':core')
+    compile project(':core').sourceSets.api.output
+    compile project(':core').sourceSets.main.output
 }
