@@ -4,6 +4,7 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import yg0r2.extras.core.blocks.BlockRegistry;
 import yg0r2.extras.core.items.ItemRegistry;
+import yg0r2.extras.core.recipes.RecipeRegistry;
 
 @Mod(name = McExtrasCoreMod.MOD_NAME, modid = McExtrasCoreMod.MOD_ID, version = McExtrasCoreMod.MOD_VERSION, acceptedMinecraftVersions = "[1.7.10,)", dependencies = "required-after:Forge@[10.13.4.1614,)")
 public class McExtrasCoreMod {
@@ -17,6 +18,7 @@ public class McExtrasCoreMod {
 
     private BlockRegistry blockRegistry;
     private ItemRegistry itemRegistry;
+    private RecipeRegistry recipeRegistry;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
@@ -27,6 +29,10 @@ public class McExtrasCoreMod {
         if (itemRegistry != null) {
             itemRegistry.registerItems();
         }
+
+        if (recipeRegistry != null) {
+            recipeRegistry.registerRecipes();
+        }
     }
 
     protected void setBlockRegistry(BlockRegistry blockRegistry) {
@@ -35,6 +41,10 @@ public class McExtrasCoreMod {
 
     protected void setItemRegistry(ItemRegistry itemRegistry) {
         this.itemRegistry = itemRegistry;
+    }
+
+    protected void setRecipeRegistry(RecipeRegistry recipeRegistry) {
+        this.recipeRegistry = recipeRegistry;
     }
 
 }
