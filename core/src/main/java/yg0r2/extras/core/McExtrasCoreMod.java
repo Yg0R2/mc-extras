@@ -3,6 +3,7 @@ package yg0r2.extras.core;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import yg0r2.extras.core.blocks.BlockRegistry;
+import yg0r2.extras.core.items.ItemRegistry;
 
 @Mod(name = McExtrasCoreMod.MOD_NAME, modid = McExtrasCoreMod.MOD_ID, version = McExtrasCoreMod.MOD_VERSION, acceptedMinecraftVersions = "[1.7.10,)", dependencies = "required-after:Forge@[10.13.4.1614,)")
 public class McExtrasCoreMod {
@@ -15,16 +16,25 @@ public class McExtrasCoreMod {
     public static McExtrasCoreMod instance;
 
     private BlockRegistry blockRegistry;
+    private ItemRegistry itemRegistry;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         if (blockRegistry != null) {
             blockRegistry.registerBlocks();
         }
+
+        if (itemRegistry != null) {
+            itemRegistry.registerItems();
+        }
     }
 
     protected void setBlockRegistry(BlockRegistry blockRegistry) {
         this.blockRegistry = blockRegistry;
+    }
+
+    protected void setItemRegistry(ItemRegistry itemRegistry) {
+        this.itemRegistry = itemRegistry;
     }
 
 }
