@@ -1,0 +1,18 @@
+repositories {
+    ivy {
+        name = "ic2"
+        url "http://jenkins.ic2.player.to/job/IC2_experimental/lastSuccessfulBuild/artifact/build/libs/"
+        layout "pattern", {
+            //artifact "[module]-[revision]-experimental-api.[ext]"
+            artifact "[module]-[revision]-experimental-dev.[ext]"
+        }
+    }
+}
+
+dependencies {
+    compile project(':core').sourceSets.api.output
+    compile project(':core').sourceSets.main.output
+
+    compile group: "industrialcraft-2", name: "industrialcraft-2", version: "2.2.828"
+}
+
