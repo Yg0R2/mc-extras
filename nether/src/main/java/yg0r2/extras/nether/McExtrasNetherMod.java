@@ -9,7 +9,12 @@ import yg0r2.extras.nether.items.NetherItemRegistry;
 import yg0r2.extras.nether.recipes.NetherRecipeRegistry;
 import yg0r2.extras.nether.world.NetherWorldGeneratorRegistry;
 
-@Mod(name = McExtrasNetherMod.MOD_NAME, modid = McExtrasNetherMod.MOD_ID, version = McExtrasNetherMod.MOD_VERSION, dependencies = McExtrasNetherMod.DEPENDENCIES)
+@Mod(
+    name = McExtrasNetherMod.MOD_NAME,
+    modid = McExtrasNetherMod.MOD_ID,
+    version = McExtrasNetherMod.MOD_VERSION,
+    dependencies = McExtrasNetherMod.DEPENDENCIES
+)
 public final class McExtrasNetherMod {
 
     public static final String MOD_ID = "mc-extras-nether";

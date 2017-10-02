@@ -1,16 +1,59 @@
-[
 {
-  "modid": "mc-extras",
-  "name": "MC Extras",
-  "description": "This mod adds new recipes and items and blocks.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["Yg0R2"],
-  "credits": "Add new recipes and items and blocks.",
-  "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
+  "modListVersion": 2,
+  "modList": [
+    {
+      "modid": "mc-extras-core",
+      "name": "MC Extras Core",
+      "description": "Extend Minecraft with new recipes, items and blocks.",
+      "version": "${version}",
+      "mcversion": "${mcversion}",
+      "url": "",
+      "updateUrl": "",
+      "authorList": [ "Yg0R2" ],
+      "credits": "Created by Yg0R2",
+      "logoFile": "",
+      "screenshots": [],
+      "parent": "mc-extras-core",
+      "requiredMods": [],
+      "dependencies": [ "Forge" ],
+      "dependants": [],
+      "useDependencyInformation": false
+    },
+    {
+      "modid": "mc-extras-ic2",
+      "name": "MC Extras IC2",
+      "description": "Extend IC2 with new recipes, items and blocks.",
+      "version": "${version}",
+      "mcversion": "${mcversion}",
+      "url": "",
+      "updateUrl": "",
+      "authorList": [ "Yg0R2" ],
+      "credits": "Created by Yg0R2",
+      "logoFile": "",
+      "screenshots": [],
+      "parent": "mc-extras-core",
+      "requiredMods": [ "IC2" ],
+      "dependencies": [ "IC2" ],
+      "dependants": [],
+      "useDependencyInformation": true
+    },
+    {
+      "modid": "mc-extras-nether",
+      "name": "MC Extras Nether",
+      "description": "Extend Minecraft with new recipes, items and blocks.",
+      "version": "${version}",
+      "mcversion": "${mcversion}",
+      "url": "",
+      "updateUrl": "",
+      "authorList": [ "Yg0R2" ],
+      "credits": "Created by Yg0R2",
+      "logoFile": "",
+      "screenshots": [],
+      "parent": "mc-extras-core",
+      "requiredMods": [],
+      "dependencies": [],
+      "dependants": [],
+      "useDependencyInformation": true
+    }
+  ]
 }
-]
