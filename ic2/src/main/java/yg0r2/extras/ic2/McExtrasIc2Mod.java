@@ -3,6 +3,7 @@ package yg0r2.extras.ic2;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import yg0r2.extras.core.McExtrasCoreMod;
+import yg0r2.extras.ic2.items.Ic2ItemRegistry;
 import yg0r2.extras.ic2.recipes.Ic2RecipeRegistry;
 
 @Mod(name = McExtrasIc2Mod.MOD_NAME, modid = McExtrasIc2Mod.MOD_ID, version = McExtrasIc2Mod.MOD_VERSION, dependencies = McExtrasIc2Mod.DEPENDENCIES)
@@ -18,6 +19,7 @@ public class McExtrasIc2Mod {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        (new Ic2ItemRegistry()).registerItems();
         (new Ic2RecipeRegistry()).registerRecipes();
     }
 

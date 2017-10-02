@@ -5,7 +5,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import yg0r2.extras.core.recipes.RecipeRegistry;
-import yg0r2.extras.ic2.items.ItemWitherSkull;
+import yg0r2.extras.ic2.items.Ic2Items;
 
 public final class Ic2RecipeRegistry extends RecipeRegistry {
 
@@ -14,7 +14,7 @@ public final class Ic2RecipeRegistry extends RecipeRegistry {
     @Override
     public void registerRecipes() {
         UU_INDEX_INSTANCE.add(new ItemStack(Items.nether_star), 102400); // 1.024 B
-        UU_INDEX_INSTANCE.add(ItemWitherSkull.getItemStack(), 10240); // 102.4 mB
+        UU_INDEX_INSTANCE.add(Ic2Items.WITHER_SKULL.getItemStack(), 10240); // 102.4 mB
         UU_INDEX_INSTANCE.add(new ItemStack(Blocks.soul_sand), 1024); // 10.24 mB
     }
 

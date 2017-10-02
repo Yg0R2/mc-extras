@@ -8,12 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This is only a wrapper for Wither Skull
+ * This is only a wrapper for Wither Skull Item.
  */
-public final class ItemWitherSkull extends ItemSkull {
-
-    public ItemWitherSkull() {
-    }
+public final class ItemWitherSkull {
 
     public static ItemStack getItemStack() {
         int witherSkullDamage = getDamage();
@@ -45,8 +42,12 @@ public final class ItemWitherSkull extends ItemSkull {
         ItemSkull skull = (ItemSkull) Items.skull;
 
         List<ItemStack> subItemStacks = new ArrayList<>();
-        skull.getSubItems(Items.skull, null, subItemStacks);
+        skull.getSubItems(Items.skull, skull.getCreativeTab(), subItemStacks);
 
         return subItemStacks;
     }
+
+    ItemWitherSkull() {
+    }
+
 }
