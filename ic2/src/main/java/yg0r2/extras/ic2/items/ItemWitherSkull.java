@@ -3,6 +3,7 @@ package yg0r2.extras.ic2.items;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemSkull;
 import net.minecraft.item.ItemStack;
+import yg0r2.extras.core.utils.SideUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +43,9 @@ public final class ItemWitherSkull {
         ItemSkull skull = (ItemSkull) Items.skull;
 
         List<ItemStack> subItemStacks = new ArrayList<>();
-        skull.getSubItems(Items.skull, skull.getCreativeTab(), subItemStacks);
+        if (SideUtils.isClient()) {
+            skull.getSubItems(Items.skull, skull.getCreativeTab(), subItemStacks);
+        }
 
         return subItemStacks;
     }
