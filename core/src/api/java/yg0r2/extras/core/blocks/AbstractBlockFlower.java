@@ -14,6 +14,7 @@ import net.minecraftforge.common.IPlantable;
 import yg0r2.extras.core.McExtrasCreativeTabs;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -52,7 +53,7 @@ public abstract class AbstractBlockFlower extends BlockFlower implements IPlanta
         int blockMetadata = world.getBlockMetadata(x, y, z);
 
         if (blockMetadata == 0) {
-            dropBlockAsItem(world, x, y, z, blockMetadata, 0);
+            dropItems(world, x, y, z);
             world.setBlockToAir(x, y, z);
         }
 
@@ -67,6 +68,24 @@ public abstract class AbstractBlockFlower extends BlockFlower implements IPlanta
     @Override
     public void registerBlockIcons(IIconRegister iconRegister) {
         icon = iconRegister.registerIcon(getTextureName());
+    }
+
+    protected List<ItemStack> dropOnActivated() {
+        return Arrays.asList(new ItemStack(this, 1, 0));
+    }
+
+    private void dropItems(World world, int x, int y, int z) {
+        for (ItemStack itemStackDrop : dropOnActivated()) {
+            dropItem(world, x, y, z, itemStackDrop);
+        }
+    }
+
+    private void dropItem(World world, int x, int y, int z, ItemStack itemStack) {
+        int count = quantityDropped(world.rand);
+
+        for (int i = 0; i <= count; i++) {
+            dropBlockAsItem(world, x, y, z, itemStack);
+        }
     }
 
 }

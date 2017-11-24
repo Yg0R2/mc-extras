@@ -14,6 +14,9 @@ public class ForestryRecipeRegistry extends RecipeRegistry {
 
     @Override
     public void registerRecipes() {
+        registerFlower(CoreBlocks.COTTON_FLOWER, FlowerManager.FlowerTypeVanilla);
+        registerFarmable(CoreItems.COTTON_FLOWER_SEED, CoreBlocks.COTTON_FLOWER_CROP);
+
         registerFlower(CoreBlocks.GLOW_FLOWER, FlowerManager.FlowerTypeNether);
         registerFarmable(CoreItems.GLOW_FLOWER_SEED, CoreBlocks.GLOW_FLOWER_CROP);
     }

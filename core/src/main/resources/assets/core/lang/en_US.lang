@@ -1,8 +1,12 @@
 # Blocks
+tile.cottonFlower.name=Cotton Flower
+tile.cottonFlowerCrop.name=Cotton Flower Crop
 tile.glowFlower.name=Glow Flower
 tile.glowFlowerCrop.name=Glow Flower Crop
 
 # Items
+item.cotton.name=Cotton
+item.cottonFlowerSeed.name=Cotton Flower Seed
 item.glowFlowerSeed.name=Glow Flower Seed
 
 # Tab

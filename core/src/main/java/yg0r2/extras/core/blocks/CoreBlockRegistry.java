@@ -4,8 +4,10 @@ public final class CoreBlockRegistry extends BlockRegistry {
 
     @Override
     public void registerBlocks() {
-        CoreBlocks.GLOW_FLOWER = registerBlock(new BlockGlowFlower());
+        CoreBlocks.COTTON_FLOWER = registerBlock(new BlockCottonFlower());
+        CoreBlocks.COTTON_FLOWER_CROP = registerBlock(new BlockCottonFlowerCrop());
 
+        CoreBlocks.GLOW_FLOWER = registerBlock(new BlockGlowFlower());
         CoreBlocks.GLOW_FLOWER_CROP = registerBlock(new BlockGlowFlowerCrop());
     }
 
