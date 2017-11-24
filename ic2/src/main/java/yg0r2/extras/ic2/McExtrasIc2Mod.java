@@ -17,8 +17,8 @@ public final class McExtrasIc2Mod {
     public static final String MOD_ID = "mc-extras-ic2";
     public static final String MOD_NAME = "MC Extras IC2";
     public static final String MOD_VERSION = "@VERSION@";
-    public static final String DEPENDENCIES = "required-after:" + McExtrasCoreMod.MOD_ID + "@[" + MOD_VERSION + "]"
-        + ";after:IC2@[2.2.827-experimental,)";
+    public static final String DEPENDENCIES = "required-after:" + McExtrasCoreMod.MOD_ID + "@[" + MOD_VERSION + "]" +
+        ";after:IC2@[2.2.827-experimental,)";
 
     @Mod.Instance(MOD_ID)
     public static McExtrasIc2Mod instance;

@@ -20,6 +20,24 @@
       "useDependencyInformation": false
     },
     {
+      "modid": "mc-extras-forestry",
+      "name": "MC Extras Forestry",
+      "description": "Extend Forestry with new recipes, items and blocks.",
+      "version": "${version}",
+      "mcversion": "${mcversion}",
+      "url": "",
+      "updateUrl": "",
+      "authorList": [ "Yg0R2" ],
+      "credits": "Created by Yg0R2",
+      "logoFile": "",
+      "screenshots": [],
+      "parent": "mc-extras-core",
+      "requiredMods": [ "Forestry" ],
+      "dependencies": [ "Forestry" ],
+      "dependants": [],
+      "useDependencyInformation": true
+    },
+    {
       "modid": "mc-extras-ic2",
       "name": "MC Extras IC2",
       "description": "Extend IC2 with new recipes, items and blocks.",
@@ -34,24 +52,6 @@
       "parent": "mc-extras-core",
       "requiredMods": [ "IC2" ],
       "dependencies": [ "IC2" ],
-      "dependants": [],
-      "useDependencyInformation": true
-    },
-    {
-      "modid": "mc-extras-nether",
-      "name": "MC Extras Nether",
-      "description": "Extend Minecraft with new recipes, items and blocks.",
-      "version": "${version}",
-      "mcversion": "${mcversion}",
-      "url": "",
-      "updateUrl": "",
-      "authorList": [ "Yg0R2" ],
-      "credits": "Created by Yg0R2",
-      "logoFile": "",
-      "screenshots": [],
-      "parent": "mc-extras-core",
-      "requiredMods": [],
-      "dependencies": [],
       "dependants": [],
       "useDependencyInformation": true
     }

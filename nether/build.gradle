@@ -1,4 +1,0 @@
-dependencies {
-    compile project(':core').sourceSets.api.output
-    compile project(':core').sourceSets.main.output
-}

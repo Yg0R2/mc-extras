@@ -1,0 +1,16 @@
+repositories {
+    maven {
+        name = "forestry"
+        url = "http://maven.ic2.player.to/"
+    }
+}
+
+ext.forestryVersion = "4.2.16.64"
+
+dependencies {
+    compile project(':core').sourceSets.api.output
+    compile project(':core').sourceSets.main.output
+
+    compile group: "net.sengir.forestry", name: "forestry_1.7.10", version: forestryVersion, classifier: "api"
+    compile group: "net.sengir.forestry", name: "forestry_1.7.10", version: forestryVersion, classifier: "dev"
+}
