@@ -1,15 +1,15 @@
-package yg0r2.extras.nether.world;
+package yg0r2.extras.core.world;
 
 import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldProviderHell;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenerator;
-import yg0r2.extras.nether.blocks.NetherBlocks;
+import yg0r2.extras.core.blocks.CoreBlocks;
 
 import java.util.Random;
 
-public class NetherWorldGenerator extends WorldGenerator implements IWorldGenerator {
+public class CoreWorldGenerator extends WorldGenerator implements IWorldGenerator {
 
     @Override
     public void generate(Random random, int x, int z, World world, IChunkProvider iChunkProvider, IChunkProvider iChunkProvider1) {
@@ -27,8 +27,8 @@ public class NetherWorldGenerator extends WorldGenerator implements IWorldGenera
             int y1 = y + random.nextInt(4) - random.nextInt(4);
             int z1 = z + random.nextInt(8) - random.nextInt(8);
 
-            if ((world.isAirBlock(x1, y1, z1)) && (NetherBlocks.GLOW_FLOWER.canPlaceBlockAt(world, x1, y1, z1))) {
-                world.setBlock(x1, y1, z1, NetherBlocks.GLOW_FLOWER, 0, 2);
+            if ((world.isAirBlock(x1, y1, z1)) && (CoreBlocks.GLOW_FLOWER.canPlaceBlockAt(world, x1, y1, z1))) {
+                world.setBlock(x1, y1, z1, CoreBlocks.GLOW_FLOWER, 0, 2);
             }
         }
 

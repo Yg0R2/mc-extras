@@ -1,4 +1,4 @@
-package yg0r2.extras.nether.blocks;
+package yg0r2.extras.core.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCrops;
@@ -19,7 +19,7 @@ public final class BlockGlowFlowerCrop extends BlockCrops implements IPlantable 
 
         setLightLevel(1.0F);
         setBlockName("glowFlowerCrop");
-        setBlockTextureName("nether:glowFlowerCrop");
+        setBlockTextureName("core:glowFlowerCrop");
     }
 
     @Override
@@ -29,12 +29,12 @@ public final class BlockGlowFlowerCrop extends BlockCrops implements IPlantable 
 
     @Override
     protected Item func_149866_i() {
-        return Item.getItemFromBlock(NetherBlocks.GLOW_FLOWER);
+        return Item.getItemFromBlock(CoreBlocks.GLOW_FLOWER);
     }
 
     @Override
     protected Item func_149865_P() {
-        return Item.getItemFromBlock(NetherBlocks.GLOW_FLOWER);
+        return Item.getItemFromBlock(CoreBlocks.GLOW_FLOWER);
     }
 
     @Override

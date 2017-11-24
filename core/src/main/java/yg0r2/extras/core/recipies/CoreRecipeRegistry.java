@@ -1,11 +1,11 @@
-package yg0r2.extras.nether.recipes;
+package yg0r2.extras.core.recipies;
 
 import net.minecraft.item.ItemStack;
+import yg0r2.extras.core.blocks.CoreBlocks;
+import yg0r2.extras.core.items.CoreItems;
 import yg0r2.extras.core.recipes.RecipeRegistry;
-import yg0r2.extras.nether.blocks.NetherBlocks;
-import yg0r2.extras.nether.items.NetherItems;
 
-public final class NetherRecipeRegistry extends RecipeRegistry {
+public final class CoreRecipeRegistry extends RecipeRegistry {
 
     @Override
     public void registerRecipes() {
@@ -14,13 +14,13 @@ public final class NetherRecipeRegistry extends RecipeRegistry {
     }
 
     private ItemStack getGlowFlowerSeedItemStack() {
-        return new ItemStack(NetherItems.GLOW_FLOWER_SEED, 2, 0);
+        return new ItemStack(CoreItems.GLOW_FLOWER_SEED, 2, 0);
     }
 
     private Object[] getGlowFlowerSeedParams() {
         return  new Object[] {
-            new ItemStack(NetherBlocks.GLOW_FLOWER, 1, 0),
-            new ItemStack(NetherBlocks.GLOW_FLOWER, 1, 0)
+            new ItemStack(CoreBlocks.GLOW_FLOWER, 1, 0),
+            new ItemStack(CoreBlocks.GLOW_FLOWER, 1, 0)
         };
     }
 
@@ -30,9 +30,9 @@ public final class NetherRecipeRegistry extends RecipeRegistry {
 
     private Object[] getGlowStoneParams() {
         return new Object[] {
-            new ItemStack(NetherBlocks.GLOW_FLOWER, 1, 0),
-            new ItemStack(NetherBlocks.GLOW_FLOWER, 1, 0),
-            new ItemStack(NetherBlocks.GLOW_FLOWER, 1, 0)
+            new ItemStack(CoreBlocks.GLOW_FLOWER, 1, 0),
+            new ItemStack(CoreBlocks.GLOW_FLOWER, 1, 0),
+            new ItemStack(CoreBlocks.GLOW_FLOWER, 1, 0)
         };
     }
 

@@ -1,4 +1,4 @@
-package yg0r2.extras.nether.blocks;
+package yg0r2.extras.core.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFlower;
@@ -26,7 +26,7 @@ public final class BlockGlowFlower extends BlockFlower implements IPlantable {
         super(0);
 
         setBlockName("glowFlower");
-        setBlockTextureName("nether:glowFlower");
+        setBlockTextureName("core:glowFlower");
         setCreativeTab(McExtrasCreativeTabs.MC_EXTRAS_CREATIVE_TAB);
 
         float delta = 0.2F;

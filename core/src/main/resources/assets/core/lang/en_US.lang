@@ -1,2 +1,9 @@
+# Blocks
+tile.glowFlower.name=Glow Flower
+tile.glowFlowerCrop.name=Glow Flower Crop
+
+# Items
+item.glowFlowerSeed.name=Glow Flower Seed
+
 # Tab
 itemGroup.mcExtrasCreativeTab=Mc Extras
