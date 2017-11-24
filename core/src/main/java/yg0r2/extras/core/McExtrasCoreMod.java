@@ -4,25 +4,22 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import yg0r2.extras.ModKeyValues;
 import yg0r2.extras.core.blocks.CoreBlockRegistry;
 import yg0r2.extras.core.items.CoreItemRegistry;
 import yg0r2.extras.core.recipies.CoreRecipeRegistry;
 import yg0r2.extras.core.world.CoreWorldGeneratorRegistry;
 
 @Mod(
-    name = McExtrasCoreMod.MOD_NAME,
-    modid = McExtrasCoreMod.MOD_ID,
-    version = McExtrasCoreMod.MOD_VERSION,
-    acceptedMinecraftVersions = "[1.7.10,)",
-    dependencies = "required-after:Forge@[10.13.4.1614,)"
+    name = ModKeyValues.CORE_MOD_NAME,
+    modid = ModKeyValues.CORE_MOD_ID,
+    version = ModKeyValues.MOD_VERSION,
+    acceptedMinecraftVersions = ModKeyValues.ACCEPTABLE_MINECRAFT_VERSIONS,
+    dependencies = ModKeyValues.CORE_MOD_DEPENDENCIES
 )
 public class McExtrasCoreMod {
 
-    public static final String MOD_ID = "mc-extras-core";
-    public static final String MOD_NAME = "MC Extras Core";
-    public static final String MOD_VERSION = "@VERSION@";
-
-    @Mod.Instance(MOD_ID)
+    @Mod.Instance(ModKeyValues.CORE_MOD_ID)
     public static McExtrasCoreMod instance;
 
     @Mod.EventHandler
@@ -39,7 +36,6 @@ public class McExtrasCoreMod {
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-
     }
 
 }

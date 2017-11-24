@@ -1,32 +1,36 @@
 package yg0r2.extras.ic2;
 
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import yg0r2.extras.core.McExtrasCoreMod;
+import yg0r2.extras.ModKeyValues;
 import yg0r2.extras.ic2.items.Ic2ItemRegistry;
 import yg0r2.extras.ic2.recipes.Ic2RecipeRegistry;
 
 @Mod(
-    name = McExtrasIc2Mod.MOD_NAME,
-    modid = McExtrasIc2Mod.MOD_ID,
-    version = McExtrasIc2Mod.MOD_VERSION,
-    dependencies = McExtrasIc2Mod.DEPENDENCIES
+    name = ModKeyValues.IC2_MOD_NAME,
+    modid = ModKeyValues.IC2_MOD_ID,
+    version = ModKeyValues.MOD_VERSION,
+    dependencies = ModKeyValues.IC2_MOD_DEPENDENCIES
 )
 public final class McExtrasIc2Mod {
 
-    public static final String MOD_ID = "mc-extras-ic2";
-    public static final String MOD_NAME = "MC Extras IC2";
-    public static final String MOD_VERSION = "@VERSION@";
-    public static final String DEPENDENCIES = "required-after:" + McExtrasCoreMod.MOD_ID + "@[" + MOD_VERSION + "]" +
-        ";after:IC2@[2.2.827-experimental,)";
-
-    @Mod.Instance(MOD_ID)
+    @Mod.Instance(ModKeyValues.IC2_MOD_ID)
     public static McExtrasIc2Mod instance;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         (new Ic2ItemRegistry()).registerItems();
         (new Ic2RecipeRegistry()).registerRecipes();
+    }
+
+    @Mod.EventHandler
+    public void init(FMLInitializationEvent event) {
+    }
+
+    @Mod.EventHandler
+    public void postInit(FMLPostInitializationEvent event) {
     }
 
 }
