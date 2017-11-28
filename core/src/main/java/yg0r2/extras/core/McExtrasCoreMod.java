@@ -7,7 +7,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import yg0r2.extras.ModKeyValues;
 import yg0r2.extras.core.blocks.CoreBlockRegistry;
 import yg0r2.extras.core.items.CoreItemRegistry;
-import yg0r2.extras.core.recipies.CoreRecipeRegistry;
+import yg0r2.extras.core.recipes.CoreRecipeRegistry;
 import yg0r2.extras.core.world.CoreWorldGeneratorRegistry;
 
 @Mod(

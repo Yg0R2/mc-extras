@@ -1,9 +1,8 @@
-package yg0r2.extras.core.recipies;
+package yg0r2.extras.core.recipes;
 
 import net.minecraft.item.ItemStack;
 import yg0r2.extras.core.blocks.CoreBlocks;
 import yg0r2.extras.core.items.CoreItems;
-import yg0r2.extras.core.recipes.RecipeRegistry;
 
 public final class CoreRecipeRegistry extends RecipeRegistry {
 
