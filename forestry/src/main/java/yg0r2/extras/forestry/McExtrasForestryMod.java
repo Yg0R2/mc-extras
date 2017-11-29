@@ -5,6 +5,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import yg0r2.extras.ModKeyValues;
+import yg0r2.extras.forestry.recipes.ForestryRecipeRegistry;
 
 @Mod(
     name = ModKeyValues.FORESTRY_MOD_NAME,
@@ -23,6 +24,7 @@ public final class McExtrasForestryMod {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+        new ForestryRecipeRegistry().registerRecipes();
     }
 
     @Mod.EventHandler
