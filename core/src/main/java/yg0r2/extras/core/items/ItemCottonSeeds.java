@@ -8,7 +8,7 @@ import net.minecraftforge.common.IPlantable;
 import yg0r2.extras.core.McExtrasCreativeTabs;
 import yg0r2.extras.core.blocks.CoreBlocks;
 
-public class ItemCottonSeeds extends CoreItemSeed {
+final class ItemCottonSeeds extends CoreItemSeed {
 
     public ItemCottonSeeds() {
         super(CoreBlocks.COTTON_FLOWER_CROP, Blocks.farmland, "cottonFlowerSeed");

@@ -9,7 +9,7 @@ import yg0r2.extras.core.blocks.CoreBlocks;
 
 import java.util.Random;
 
-public class CoreWorldGenerator extends WorldGenerator implements IWorldGenerator {
+final class CoreWorldGenerator extends WorldGenerator implements IWorldGenerator {
 
     @Override
     public void generate(Random random, int x, int z, World world, IChunkProvider iChunkProvider, IChunkProvider iChunkProvider1) {

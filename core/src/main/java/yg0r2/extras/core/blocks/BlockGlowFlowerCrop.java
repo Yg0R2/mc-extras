@@ -12,7 +12,7 @@ import yg0r2.extras.core.items.CoreItems;
 import java.util.Arrays;
 import java.util.List;
 
-public final class BlockGlowFlowerCrop extends CoreBlockCrop {
+final class BlockGlowFlowerCrop extends CoreBlockCrop {
 
     public BlockGlowFlowerCrop() {
         super("glowFlowerCrop");

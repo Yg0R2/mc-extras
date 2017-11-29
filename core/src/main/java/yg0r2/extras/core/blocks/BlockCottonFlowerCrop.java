@@ -7,7 +7,7 @@ import yg0r2.extras.core.items.CoreItems;
 import java.util.Arrays;
 import java.util.List;
 
-public class BlockCottonFlowerCrop extends CoreBlockCrop {
+final class BlockCottonFlowerCrop extends CoreBlockCrop {
 
     public BlockCottonFlowerCrop() {
         super("cottonFlowerCrop");

@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class BlockCottonFlower extends CoreBlockFlower {
+final class BlockCottonFlower extends CoreBlockFlower {
 
     protected BlockCottonFlower() {
         super("cottonFlower");

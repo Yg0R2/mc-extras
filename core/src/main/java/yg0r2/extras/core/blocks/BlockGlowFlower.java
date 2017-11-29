@@ -5,7 +5,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.common.EnumPlantType;
 
-public final class BlockGlowFlower extends CoreBlockFlower {
+final class BlockGlowFlower extends CoreBlockFlower {
 
     public BlockGlowFlower() {
         super("glowFlower");
