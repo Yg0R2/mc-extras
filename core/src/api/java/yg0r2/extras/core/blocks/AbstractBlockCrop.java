@@ -3,12 +3,14 @@ package yg0r2.extras.core.blocks;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.IPlantable;
 import yg0r2.extras.core.McExtrasCreativeTabs;
 
+import java.util.List;
 import java.util.Random;
 
 public abstract class AbstractBlockCrop extends BlockCrops implements IPlantable {
@@ -22,18 +24,14 @@ public abstract class AbstractBlockCrop extends BlockCrops implements IPlantable
         setCreativeTab(McExtrasCreativeTabs.MC_EXTRAS_CREATIVE_TAB);
     }
 
-    protected abstract Item dropItem();
-
-    protected abstract Item dropSeedItem();
-
     @Override
     protected Item func_149865_P() {
-        return dropItem();
+        return getHarvestedItem();
     }
 
     @Override
     protected Item func_149866_i() {
-        return dropSeedItem();
+        return getHarvestedSeedItem();
     }
 
     @Override
@@ -42,26 +40,40 @@ public abstract class AbstractBlockCrop extends BlockCrops implements IPlantable
     }
 
     @Override
-    public boolean onBlockActivated(World world, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer entityPlayer, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_) {
-        int blockMetadata = world.getBlockMetadata(p_149727_2_, p_149727_3_, p_149727_4_);
+    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer entityPlayer, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_) {
+        int blockMetadata = world.getBlockMetadata(x, y, z);
 
         if (blockMetadata == 7) {
-            dropBlockAsItem(world, p_149727_2_, p_149727_3_, p_149727_4_, blockMetadata, 0);
-            world.setBlock(p_149727_2_, p_149727_3_, p_149727_4_, this, 0, 2);
+            dropItems(world, x, y, z);
+            world.setBlock(x, y, z, this, 0, 2);
         }
 
         return false;
     }
 
-    /**
-     * Do not drop item.
-     *
-     * @param random
-     * @return
-     */
     @Override
     public int quantityDropped(Random random) {
-        return 0;
+        return random.nextInt(2);
+    }
+
+    protected abstract List<ItemStack> dropOnActivated();
+
+    protected abstract Item getHarvestedItem();
+
+    protected abstract Item getHarvestedSeedItem();
+
+    private void dropItems(World world, int x, int y, int z) {
+        for (ItemStack itemStackDrop : dropOnActivated()) {
+            dropItem(world, x, y, z, itemStackDrop);
+        }
+    }
+
+    private void dropItem(World world, int x, int y, int z, ItemStack itemStack) {
+        int count = quantityDropped(world.rand);
+
+        for (int i = 0; i <= count; i++) {
+            dropBlockAsItem(world, x, y, z, itemStack);
+        }
     }
 
 }

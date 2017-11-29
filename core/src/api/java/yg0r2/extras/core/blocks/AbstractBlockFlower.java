@@ -32,13 +32,6 @@ public abstract class AbstractBlockFlower extends BlockFlower implements IPlanta
         setTickRandomly(true);
     }
 
-    protected abstract List<ItemStack> dropOnActivated();
-
-    @Override
-    public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune) {
-        return (ArrayList) dropOnActivated();
-    }
-
     @Override
     public IIcon getIcon(int p_getIcon_1_, int p_getIcon_2_) {
         return icon;
@@ -55,15 +48,12 @@ public abstract class AbstractBlockFlower extends BlockFlower implements IPlanta
     }
 
     @Override
-    public boolean onBlockActivated(World world, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer entityPlayer, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_) {
-        int blockMetadata = world.getBlockMetadata(p_149727_2_, p_149727_3_, p_149727_4_);
+    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer entityPlayer, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_) {
+        int blockMetadata = world.getBlockMetadata(x, y, z);
 
         if (blockMetadata == 0) {
-            for (ItemStack itemStackDrop : dropOnActivated()) {
-                dropBlockAsItem(world, p_149727_2_, p_149727_3_, p_149727_4_, itemStackDrop);
-            }
-
-            world.setBlockToAir(p_149727_2_, p_149727_3_, p_149727_4_);
+            dropBlockAsItem(world, x, y, z, blockMetadata, 0);
+            world.setBlockToAir(x, y, z);
         }
 
         return false;
