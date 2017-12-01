@@ -10,4 +10,13 @@ public final class CoreBlocks {
     public static Block GLOW_FLOWER;
     public static Block GLOW_FLOWER_CROP;
 
+    public static Block ORANGE_FLOWER;
+    public static Block ORANGE_FLOWER_CROP;
+
+    public static Block RED_FLOWER;
+    public static Block RED_FLOWER_CROP;
+
+    public static Block YELLOW_FLOWER;
+    public static Block YELLOW_FLOWER_CROP;
+
 }

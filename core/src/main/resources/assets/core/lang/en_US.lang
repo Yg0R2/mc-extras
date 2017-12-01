@@ -3,11 +3,20 @@ tile.cottonFlower.name=Cotton Flower
 tile.cottonFlowerCrop.name=Cotton Flower Crop
 tile.glowFlower.name=Glow Flower
 tile.glowFlowerCrop.name=Glow Flower Crop
+tile.orangeFlower.name=Orange Flower
+tile.orangeFlowerCrop.name=Orange Flower Crop
+tile.redFlower.name=Red Flower
+tile.redFlowerCrop.name=Red Flower Crop
+tile.yellowFlower.name=Yellow Flower
+tile.yellowFlowerCrop.name=Yellow Flower Crop
 
 # Items
 item.cotton.name=Cotton
 item.cottonFlowerSeed.name=Cotton Flower Seed
 item.glowFlowerSeed.name=Glow Flower Seed
+item.orangeFlowerSeed.name=Orange Flower Seed
+item.redFlowerSeed.name=Red Flower Seed
+item.yellowFlowerSeed.name=Yellow Flower Seed
 
 # Tab
 itemGroup.mcExtrasCreativeTab=Mc Extras

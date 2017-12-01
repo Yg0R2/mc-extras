@@ -21,7 +21,7 @@ allprojects {
     apply plugin: 'java'
 
     group 'yg0r2.mc-extras'
-    version '3.3.1'
+    version '3.4'
 
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
