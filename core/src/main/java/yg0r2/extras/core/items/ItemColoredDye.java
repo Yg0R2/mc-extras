@@ -4,6 +4,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemDye;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
+import yg0r2.extras.core.ColoredContext;
 import yg0r2.extras.core.McExtrasCreativeTabs;
 
 final class ItemColoredDye extends ItemDye {
@@ -11,12 +12,12 @@ final class ItemColoredDye extends ItemDye {
     private int damage;
     private IIcon icon;
 
-    public ItemColoredDye(String dyeName) {
+    public ItemColoredDye(ColoredContext coloredContext) {
         super();
 
         setCreativeTab(McExtrasCreativeTabs.MC_EXTRAS_CREATIVE_TAB);
 
-        damage = getDamageFromName(dyeName);
+        damage = getDamageFromName(coloredContext.getDyeName());
     }
 
     @Override

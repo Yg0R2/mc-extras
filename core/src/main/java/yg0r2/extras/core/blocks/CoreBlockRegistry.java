@@ -1,5 +1,7 @@
 package yg0r2.extras.core.blocks;
 
+import yg0r2.extras.core.ColoredContext;
+
 public final class CoreBlockRegistry extends BlockRegistry {
 
     @Override
@@ -10,14 +12,14 @@ public final class CoreBlockRegistry extends BlockRegistry {
         CoreBlocks.GLOW_FLOWER = registerBlock(new BlockGlowFlower());
         CoreBlocks.GLOW_FLOWER_CROP = registerBlock(new BlockGlowFlowerCrop());
 
-        CoreBlocks.ORANGE_FLOWER = registerBlock(new BlockOrangeFlower());
-        CoreBlocks.ORANGE_FLOWER_CROP = registerBlock(new BlockOrangeFlowerCrop());
+        CoreBlocks.ORANGE_FLOWER = registerBlock(new BlockColoredFlower(ColoredContext.ORANGE_COLOR));
+        CoreBlocks.ORANGE_FLOWER_CROP = registerBlock(new BlockColoredFlowerCrop(ColoredContext.ORANGE_COLOR));
 
-        CoreBlocks.RED_FLOWER = registerBlock(new BlockRedFlower());
-        CoreBlocks.RED_FLOWER_CROP = registerBlock(new BlockRedFlowerCrop());
+        CoreBlocks.RED_FLOWER = registerBlock(new BlockColoredFlower(ColoredContext.RED_COLOR));
+        CoreBlocks.RED_FLOWER_CROP = registerBlock(new BlockColoredFlowerCrop(ColoredContext.RED_COLOR));
 
-        CoreBlocks.YELLOW_FLOWER = registerBlock(new BlockYellowFlower());
-        CoreBlocks.YELLOW_FLOWER_CROP = registerBlock(new BlockYellowFlowerCrop());
+        CoreBlocks.YELLOW_FLOWER = registerBlock(new BlockColoredFlower(ColoredContext.YELLOW_COLOR));
+        CoreBlocks.YELLOW_FLOWER_CROP = registerBlock(new BlockColoredFlowerCrop(ColoredContext.YELLOW_COLOR));
     }
 
 }

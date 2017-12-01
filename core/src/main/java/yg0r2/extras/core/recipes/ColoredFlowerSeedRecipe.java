@@ -1,29 +1,26 @@
 package yg0r2.extras.core.recipes;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import yg0r2.extras.core.ColoredContext;
 
 final class ColoredFlowerSeedRecipe implements Recipe {
 
-    private Block flower;
-    private Item seed;
+    private ColoredContext coloredContext;
 
-    public ColoredFlowerSeedRecipe(Block flower, Item seed) {
-        this.flower = flower;
-        this.seed = seed;
+    public ColoredFlowerSeedRecipe(ColoredContext coloredContext) {
+        this.coloredContext = coloredContext;
     }
 
     @Override
     public ItemStack getOutput() {
-        return new ItemStack(seed, 2, 0);
+        return new ItemStack(coloredContext.getSeed(), 2, 0);
     }
 
     @Override
     public Object[] getParams() {
         return  new Object[] {
-            new ItemStack(flower, 1, 0),
-            new ItemStack(flower, 1, 0)
+            new ItemStack(coloredContext.getFlower(), 1, 0),
+            new ItemStack(coloredContext.getFlower(), 1, 0)
         };
     }
 
