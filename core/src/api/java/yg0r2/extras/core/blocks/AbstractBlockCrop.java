@@ -56,14 +56,14 @@ public abstract class AbstractBlockCrop extends BlockCrops implements IPlantable
         return random.nextInt(2);
     }
 
-    protected abstract List<ItemStack> getItemsOnActivate();
+    protected abstract List<ItemStack> dropOnActivated();
 
     protected abstract Item getHarvestedItem();
 
     protected abstract Item getHarvestedSeedItem();
 
     private void dropItems(World world, int x, int y, int z) {
-        for (ItemStack itemStackDrop : getItemsOnActivate()) {
+        for (ItemStack itemStackDrop : dropOnActivated()) {
             dropItem(world, x, y, z, itemStackDrop);
         }
     }

@@ -18,7 +18,7 @@ final class BlockColoredFlowerCrop extends CoreBlockCrop {
     }
 
     @Override
-    protected List<ItemStack> getItemsOnActivate() {
+    protected List<ItemStack> dropOnActivated() {
         return Arrays.asList(
             new ItemStack(coloredContext.getFlower(), 2, 0),
             new ItemStack(coloredContext.getSeed(), 1, 0)
