@@ -14,7 +14,7 @@ final class BlockCottonFlowerCrop extends CoreBlockCrop {
     }
 
     @Override
-    protected List<ItemStack> getItemsOnActivate() {
+    protected List<ItemStack> dropOnActivated() {
         return Arrays.asList(
             new ItemStack(CoreItems.COTTON, 2, 0),
             new ItemStack(CoreItems.COTTON_FLOWER_SEED, 1, 0)

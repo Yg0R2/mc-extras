@@ -31,7 +31,7 @@ final class BlockGlowFlowerCrop extends CoreBlockCrop {
     }
 
     @Override
-    protected List<ItemStack> getItemsOnActivate() {
+    protected List<ItemStack> dropOnActivated() {
         return Arrays.asList(
             new ItemStack(CoreItems.GLOW_FLOWER_SEED, 1, 0),
             new ItemStack(Items.glowstone_dust, 1, 0)
