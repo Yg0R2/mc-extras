@@ -5,11 +5,11 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldProviderHell;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenerator;
-import yg0r2.extras.core.blocks.CoreBlocks;
+import yg0r2.extras.api.blocks.McExtrasBlocks;
 
 import java.util.Random;
 
-final class CoreWorldGenerator extends WorldGenerator implements IWorldGenerator {
+public final class CoreWorldGenerator extends WorldGenerator implements IWorldGenerator {
 
     @Override
     public void generate(Random random, int x, int z, World world, IChunkProvider iChunkProvider, IChunkProvider iChunkProvider1) {
@@ -27,8 +27,8 @@ final class CoreWorldGenerator extends WorldGenerator implements IWorldGenerator
             int y1 = y + random.nextInt(4) - random.nextInt(4);
             int z1 = z + random.nextInt(8) - random.nextInt(8);
 
-            if ((world.isAirBlock(x1, y1, z1)) && (CoreBlocks.GLOW_FLOWER.canPlaceBlockAt(world, x1, y1, z1))) {
-                world.setBlock(x1, y1, z1, CoreBlocks.GLOW_FLOWER, 0, 2);
+            if ((world.isAirBlock(x1, y1, z1)) && (McExtrasBlocks.GLOW_FLOWER.canPlaceBlockAt(world, x1, y1, z1))) {
+                world.setBlock(x1, y1, z1, McExtrasBlocks.GLOW_FLOWER, 0, 2);
             }
         }
 

@@ -1,17 +1,13 @@
 package yg0r2.extras.core.items;
 
 import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemSeeds;
-import net.minecraft.world.IBlockAccess;
-import net.minecraftforge.common.EnumPlantType;
-import net.minecraftforge.common.IPlantable;
-import yg0r2.extras.core.McExtrasCreativeTabs;
-import yg0r2.extras.core.blocks.CoreBlocks;
+import yg0r2.extras.api.blocks.McExtrasBlocks;
+import yg0r2.extras.api.items.McExtrasItemSeed;
 
-final class ItemCottonSeeds extends CoreItemSeed {
+public final class ItemCottonSeeds extends McExtrasItemSeed {
 
     public ItemCottonSeeds() {
-        super(CoreBlocks.COTTON_FLOWER_CROP, Blocks.farmland, "cottonFlowerSeed");
+        super(McExtrasBlocks.COTTON_FLOWER_CROP, Blocks.farmland, "cottonFlowerSeed", "core:cottonFlowerSeed");
     }
 
 }

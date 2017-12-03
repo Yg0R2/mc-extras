@@ -4,11 +4,11 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import yg0r2.extras.ModKeyValues;
-import yg0r2.extras.core.blocks.CoreBlockRegistry;
-import yg0r2.extras.core.items.CoreItemRegistry;
-import yg0r2.extras.core.recipes.CoreRecipeRegistry;
-import yg0r2.extras.core.world.CoreWorldGeneratorRegistry;
+import yg0r2.extras.api.ModKeyValues;
+import yg0r2.extras.core.blocks.registry.CoreBlockRegistry;
+import yg0r2.extras.core.items.registry.CoreItemRegistry;
+import yg0r2.extras.core.recipes.registry.CoreRecipeRegistry;
+import yg0r2.extras.core.world.registry.CoreWorldGeneratorRegistry;
 
 @Mod(
     name = ModKeyValues.CORE_MOD_NAME,

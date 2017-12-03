@@ -3,7 +3,7 @@ package yg0r2.extras.ic2.items;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemSkull;
 import net.minecraft.item.ItemStack;
-import yg0r2.extras.core.utils.SideUtils;
+import yg0r2.extras.api.utils.SideUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +50,7 @@ public final class ItemWitherSkull {
         return subItemStacks;
     }
 
-    ItemWitherSkull() {
+    public ItemWitherSkull() {
     }
 
 }

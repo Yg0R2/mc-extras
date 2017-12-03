@@ -4,7 +4,7 @@ import ic2.core.uu.UuIndex;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import yg0r2.extras.core.recipes.RecipeRegistry;
+import yg0r2.extras.api.recipes.registry.RecipeRegistry;
 import yg0r2.extras.ic2.items.Ic2Items;
 
 public final class Ic2RecipeRegistry extends RecipeRegistry {

@@ -2,33 +2,34 @@ package yg0r2.extras.core.blocks;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import yg0r2.extras.core.items.CoreItems;
+import yg0r2.extras.api.blocks.McExtrasBlockCrop;
+import yg0r2.extras.api.items.McExtrasItems;
 
 import java.util.Arrays;
 import java.util.List;
 
-final class BlockCottonFlowerCrop extends CoreBlockCrop {
+public final class BlockCottonFlowerCrop extends McExtrasBlockCrop {
 
     public BlockCottonFlowerCrop() {
-        super("cottonFlowerCrop");
+        super("cottonFlowerCrop", "core:cottonFlowerCrop");
     }
 
     @Override
     protected List<ItemStack> dropOnActivated() {
         return Arrays.asList(
-            new ItemStack(CoreItems.COTTON, 2, 0),
-            new ItemStack(CoreItems.COTTON_FLOWER_SEED, 1, 0)
+            new ItemStack(McExtrasItems.COTTON, 2, 0),
+            new ItemStack(McExtrasItems.COTTON_FLOWER_SEED, 1, 0)
         );
     }
 
     @Override
     protected Item getHarvestedItem() {
-        return CoreItems.COTTON;
+        return McExtrasItems.COTTON;
     }
 
     @Override
     protected Item getHarvestedSeedItem() {
-        return CoreItems.COTTON_FLOWER_SEED;
+        return McExtrasItems.COTTON_FLOWER_SEED;
     }
 
 }

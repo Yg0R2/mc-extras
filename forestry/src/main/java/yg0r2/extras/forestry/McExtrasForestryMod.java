@@ -4,8 +4,8 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import yg0r2.extras.ModKeyValues;
-import yg0r2.extras.forestry.recipes.ForestryRecipeRegistry;
+import yg0r2.extras.api.ModKeyValues;
+import yg0r2.extras.forestry.recipes.registry.ForestryRecipeRegistry;
 
 @Mod(
     name = ModKeyValues.FORESTRY_MOD_NAME,

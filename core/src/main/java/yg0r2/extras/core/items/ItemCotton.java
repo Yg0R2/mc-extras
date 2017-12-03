@@ -1,9 +1,11 @@
 package yg0r2.extras.core.items;
 
-final class ItemCotton extends CoreItem {
+import yg0r2.extras.api.items.McExtrasItem;
+
+public final class ItemCotton extends McExtrasItem {
 
     public ItemCotton() {
-        super("cotton");
+        super("cotton", "core:cotton");
     }
 
 }

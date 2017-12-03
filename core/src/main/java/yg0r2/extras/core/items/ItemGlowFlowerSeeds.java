@@ -1,12 +1,13 @@
 package yg0r2.extras.core.items;
 
 import net.minecraft.init.Blocks;
-import yg0r2.extras.core.blocks.CoreBlocks;
+import yg0r2.extras.api.blocks.McExtrasBlocks;
+import yg0r2.extras.api.items.McExtrasItemSeed;
 
-final class ItemGlowFlowerSeeds extends CoreItemSeed {
+public final class ItemGlowFlowerSeeds extends McExtrasItemSeed {
 
     public ItemGlowFlowerSeeds() {
-        super(CoreBlocks.GLOW_FLOWER_CROP, Blocks.farmland, "glowFlowerSeed");
+        super(McExtrasBlocks.GLOW_FLOWER_CROP, Blocks.farmland, "glowFlowerSeed", "core:glowFlowerSeed");
     }
 
 }

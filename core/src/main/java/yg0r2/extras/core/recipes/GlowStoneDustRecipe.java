@@ -2,9 +2,10 @@ package yg0r2.extras.core.recipes;
 
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import yg0r2.extras.core.blocks.CoreBlocks;
+import yg0r2.extras.api.blocks.McExtrasBlocks;
+import yg0r2.extras.api.recipes.Recipe;
 
-final class GlowStoneDustRecipe implements Recipe {
+public final class GlowStoneDustRecipe implements Recipe {
 
     @Override
     public ItemStack getOutput() {
@@ -14,9 +15,9 @@ final class GlowStoneDustRecipe implements Recipe {
     @Override
     public Object[] getParams() {
         return new Object[] {
-            new ItemStack(CoreBlocks.GLOW_FLOWER, 1, 0),
-            new ItemStack(CoreBlocks.GLOW_FLOWER, 1, 0),
-            new ItemStack(CoreBlocks.GLOW_FLOWER, 1, 0)
+            new ItemStack(McExtrasBlocks.GLOW_FLOWER, 1, 0),
+            new ItemStack(McExtrasBlocks.GLOW_FLOWER, 1, 0),
+            new ItemStack(McExtrasBlocks.GLOW_FLOWER, 1, 0)
         };
     }
 

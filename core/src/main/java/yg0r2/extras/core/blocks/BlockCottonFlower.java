@@ -1,16 +1,17 @@
 package yg0r2.extras.core.blocks;
 
 import net.minecraft.item.ItemStack;
-import yg0r2.extras.core.items.CoreItems;
+import yg0r2.extras.api.blocks.McExtrasBlockFlower;
+import yg0r2.extras.api.items.McExtrasItems;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-final class BlockCottonFlower extends CoreBlockFlower {
+public final class BlockCottonFlower extends McExtrasBlockFlower {
 
-    protected BlockCottonFlower() {
-        super("cottonFlower");
+    public BlockCottonFlower() {
+        super("cottonFlower", "core:cottonFlower");
     }
 
     @Override
@@ -21,8 +22,8 @@ final class BlockCottonFlower extends CoreBlockFlower {
     @Override
     protected List<ItemStack> dropOnActivated() {
         return Arrays.asList(
-            new ItemStack(CoreItems.COTTON, 2, 0),
-            new ItemStack(CoreItems.COTTON_FLOWER_SEED, 1, 0)
+            new ItemStack(McExtrasItems.COTTON, 2, 0),
+            new ItemStack(McExtrasItems.COTTON_FLOWER_SEED, 1, 0)
         );
     }
 

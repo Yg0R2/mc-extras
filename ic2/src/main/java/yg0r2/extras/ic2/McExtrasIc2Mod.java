@@ -4,8 +4,8 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import yg0r2.extras.ModKeyValues;
-import yg0r2.extras.ic2.items.Ic2ItemRegistry;
+import yg0r2.extras.api.ModKeyValues;
+import yg0r2.extras.ic2.items.registry.Ic2ItemRegistry;
 import yg0r2.extras.ic2.recipes.Ic2RecipeRegistry;
 
 @Mod(
