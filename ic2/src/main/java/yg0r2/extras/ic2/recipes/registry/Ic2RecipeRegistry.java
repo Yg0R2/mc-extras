@@ -1,4 +1,4 @@
-package yg0r2.extras.ic2.recipes;
+package yg0r2.extras.ic2.recipes.registry;
 
 import ic2.core.uu.UuIndex;
 import net.minecraft.init.Blocks;
