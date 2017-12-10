@@ -5,7 +5,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import yg0r2.extras.api.ModKeyValues;
-import yg0r2.extras.ic2.items.registry.Ic2ItemRegistry;
 import yg0r2.extras.ic2.recipes.registry.Ic2RecipeRegistry;
 
 @Mod(
@@ -21,7 +20,6 @@ public final class McExtrasIc2Mod {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        (new Ic2ItemRegistry()).registerItems();
         (new Ic2RecipeRegistry()).registerRecipes();
     }
 
