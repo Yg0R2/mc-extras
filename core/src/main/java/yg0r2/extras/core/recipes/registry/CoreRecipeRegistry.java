@@ -1,8 +1,7 @@
 package yg0r2.extras.core.recipes.registry;
 
 import yg0r2.extras.api.recipes.registry.RecipeRegistry;
-import yg0r2.extras.core.recipes.GlowStoneDustRecipe;
-import yg0r2.extras.core.recipes.GlowStoneFlowerSeedRecipe;
+import yg0r2.extras.core.recipes.*;
 
 public final class CoreRecipeRegistry extends RecipeRegistry {
 
@@ -10,6 +9,15 @@ public final class CoreRecipeRegistry extends RecipeRegistry {
     public void registerRecipes() {
         registerShapelessRecipe(new GlowStoneDustRecipe());
         registerShapelessRecipe(new GlowStoneFlowerSeedRecipe());
+
+        registerShapelessRecipe(new OrangeDyeRecipe());
+        registerShapelessRecipe(new OrangeFlowerSeedRecipe());
+
+        registerShapelessRecipe(new RedDyeRecipe());
+        registerShapelessRecipe(new RedFlowerSeedRecipe());
+
+        registerShapelessRecipe(new YellowDyeRecipe());
+        registerShapelessRecipe(new YellowFlowerSeedRecipe());
     }
 
 }

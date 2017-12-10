@@ -10,4 +10,11 @@ public final class McExtrasBlocks {
     public static Block GLOW_FLOWER;
     public static Block GLOW_FLOWER_CROP;
 
+    public static Block ORANGE_FLOWER;
+    public static Block ORANGE_FLOWER_CROP;
+
+    public static Block RED_FLOWER_CROP;
+
+    public static Block YELLOW_FLOWER_CROP;
+
 }

@@ -9,4 +9,10 @@ public final class McExtrasItems {
 
     public static Item GLOW_FLOWER_SEED;
 
+    public static Item ORANGE_FLOWER_SEED;
+
+    public static Item RED_FLOWER_SEED;
+
+    public static Item YELLOW_FLOWER_SEED;
+
 }

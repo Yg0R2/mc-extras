@@ -2,10 +2,7 @@ package yg0r2.extras.core.blocks.registry;
 
 import yg0r2.extras.api.blocks.McExtrasBlocks;
 import yg0r2.extras.api.blocks.registry.BlockRegistry;
-import yg0r2.extras.core.blocks.BlockCottonFlower;
-import yg0r2.extras.core.blocks.BlockCottonFlowerCrop;
-import yg0r2.extras.core.blocks.BlockGlowFlower;
-import yg0r2.extras.core.blocks.BlockGlowFlowerCrop;
+import yg0r2.extras.core.blocks.*;
 
 public final class CoreBlockRegistry extends BlockRegistry {
 
@@ -16,6 +13,13 @@ public final class CoreBlockRegistry extends BlockRegistry {
 
         McExtrasBlocks.GLOW_FLOWER = registerBlock(new BlockGlowFlower());
         McExtrasBlocks.GLOW_FLOWER_CROP = registerBlock(new BlockGlowFlowerCrop());
+
+        McExtrasBlocks.ORANGE_FLOWER = registerBlock(new BlockOrangeFlower());
+        McExtrasBlocks.ORANGE_FLOWER_CROP = registerBlock(new BlockOrangeFlowerCrop());
+
+        McExtrasBlocks.RED_FLOWER_CROP = registerBlock(new BlockRedFlowerCrop());
+
+        McExtrasBlocks.YELLOW_FLOWER_CROP = registerBlock(new BlockYellowFlowerCrop());
     }
 
 }
