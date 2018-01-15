@@ -8,7 +8,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import yg0r2.extras.api.blocks.McExtrasBlocks;
-import yg0r2.extras.api.items.McExtrasItem;
 import yg0r2.extras.api.items.McExtrasItems;
 import yg0r2.extras.api.recipes.registry.RecipeRegistry;
 

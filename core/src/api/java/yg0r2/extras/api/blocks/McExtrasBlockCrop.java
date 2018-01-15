@@ -9,9 +9,10 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.IPlantable;
 import yg0r2.extras.api.McExtrasCreativeTabs;
+import yg0r2.extras.api.domain.ItemDrop;
 
+import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 public abstract class McExtrasBlockCrop extends BlockCrops implements IPlantable {
 
@@ -44,7 +45,10 @@ public abstract class McExtrasBlockCrop extends BlockCrops implements IPlantable
         int blockMetadata = world.getBlockMetadata(x, y, z);
 
         if (blockMetadata == 7) {
-            dropItems(world, x, y, z);
+            for (ItemDrop itemDrop : getActivatedItemDrops()) {
+                dropItems(world, x, y, z, itemDrop);
+            }
+
             world.setBlock(x, y, z, this, 0, 2);
         }
 
@@ -52,27 +56,30 @@ public abstract class McExtrasBlockCrop extends BlockCrops implements IPlantable
     }
 
     @Override
-    public int quantityDropped(Random random) {
-        return random.nextInt(2);
+    public void onBlockDestroyedByPlayer(World world, int x, int y, int z, int p_149664_5_) {
+        int blockMetadata = world.getBlockMetadata(x, y, z);
+
+        if (blockMetadata == 7) {
+            dropBlockAsItem(world, x, y, z, new ItemStack(getHarvestedSeedItem(), 1));
+        }
     }
 
-    protected abstract List<ItemStack> dropOnActivated();
+    protected List<ItemDrop> getActivatedItemDrops() {
+        return Arrays.asList(
+            new ItemDrop(1, 2, new ItemStack(getHarvestedItem())),
+            new ItemDrop(0, 1, new ItemStack(getHarvestedSeedItem()))
+        );
+    }
 
     protected abstract Item getHarvestedItem();
 
     protected abstract Item getHarvestedSeedItem();
 
-    private void dropItems(World world, int x, int y, int z) {
-        for (ItemStack itemStackDrop : dropOnActivated()) {
-            dropItem(world, x, y, z, itemStackDrop);
-        }
-    }
-
-    private void dropItem(World world, int x, int y, int z, ItemStack itemStack) {
-        int count = quantityDropped(world.rand);
+    private void dropItems(World world, int x, int y, int z, ItemDrop itemDrop) {
+        int count = itemDrop.getAmount(world.rand);
 
         for (int i = 0; i <= count; i++) {
-            dropBlockAsItem(world, x, y, z, itemStack);
+            dropBlockAsItem(world, x, y, z, itemDrop.getItemStack());
         }
     }
 
