@@ -2,6 +2,7 @@ package yg0r2.extras.core.blocks;
 
 import net.minecraft.item.ItemStack;
 import yg0r2.extras.api.blocks.McExtrasBlockFlower;
+import yg0r2.extras.api.domain.ItemDrop;
 import yg0r2.extras.api.items.McExtrasItems;
 
 import java.util.Arrays;
@@ -20,10 +21,10 @@ public final class BlockCottonFlower extends McExtrasBlockFlower {
     }
 
     @Override
-    protected List<ItemStack> dropOnActivated() {
+    protected List<ItemDrop> getDestroyedItemDrops() {
         return Arrays.asList(
-            new ItemStack(McExtrasItems.COTTON, 2, 0),
-            new ItemStack(McExtrasItems.COTTON_FLOWER_SEED, 1, 0)
+            new ItemDrop(1, 3, new ItemStack(McExtrasItems.COTTON, 2, 0)),
+            new ItemDrop(1, 1, new ItemStack(McExtrasItems.COTTON_FLOWER_SEED, 1, 0))
         );
     }
 

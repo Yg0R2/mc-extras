@@ -3,7 +3,6 @@ package yg0r2.extras.api.blocks;
 import net.minecraft.block.BlockFlower;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
@@ -12,10 +11,9 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.IPlantable;
 import yg0r2.extras.api.McExtrasCreativeTabs;
+import yg0r2.extras.api.domain.ItemDrop;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 public abstract class McExtrasBlockFlower extends BlockFlower implements IPlantable {
 
@@ -48,20 +46,16 @@ public abstract class McExtrasBlockFlower extends BlockFlower implements IPlanta
     }
 
     @Override
-    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer entityPlayer, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_) {
+    public void onBlockDestroyedByPlayer(World world, int x, int y, int z, int p_149664_5_) {
         int blockMetadata = world.getBlockMetadata(x, y, z);
 
         if (blockMetadata == 0) {
-            dropItems(world, x, y, z);
-            world.setBlockToAir(x, y, z);
+            for (ItemDrop itemDrop : getDestroyedItemDrops()) {
+                dropItems(world, x, y, z, itemDrop);
+            }
         }
 
-        return false;
-    }
-
-    @Override
-    public int quantityDropped(Random random) {
-        return random.nextInt(2) + 1;
+        world.setBlockToAir(x, y, z);
     }
 
     @Override
@@ -69,21 +63,13 @@ public abstract class McExtrasBlockFlower extends BlockFlower implements IPlanta
         icon = iconRegister.registerIcon(getTextureName());
     }
 
-    protected List<ItemStack> dropOnActivated() {
-        return Arrays.asList(new ItemStack(this, 1, 0));
-    }
+    protected abstract List<ItemDrop> getDestroyedItemDrops();
 
-    private void dropItems(World world, int x, int y, int z) {
-        for (ItemStack itemStackDrop : dropOnActivated()) {
-            dropItem(world, x, y, z, itemStackDrop);
-        }
-    }
-
-    private void dropItem(World world, int x, int y, int z, ItemStack itemStack) {
-        int count = quantityDropped(world.rand);
+    private void dropItems(World world, int x, int y, int z, ItemDrop itemDrop) {
+        int count = itemDrop.getAmount(world.rand);
 
         for (int i = 0; i <= count; i++) {
-            dropBlockAsItem(world, x, y, z, itemStack);
+            dropBlockAsItem(world, x, y, z, itemDrop.getItemStack());
         }
     }
 

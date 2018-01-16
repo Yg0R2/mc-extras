@@ -35,11 +35,11 @@ public enum Colors {
     }
 
     public String getCropBlockName() {
-        return "core:" + name + "FlowerCrop";
+        return name + "FlowerCrop";
     }
 
-    public String getCropTextureName() {
-        return name + "FlowerCrop";
+    public String getCropBlockTextureName() {
+        return "core:" + name + "FlowerCrop";
     }
 
     public ItemStack getDye() {
@@ -50,16 +50,24 @@ public enum Colors {
         return flowerBlock;
     }
 
-    public String getSeedBlockName() {
+    public String getFlowerBlockName() {
+        return name + "Flower";
+    }
+
+    public String getFlowerBlockTextureName() {
+        return "core:" + name + "Flower";
+    }
+
+    public String getSeedItemName() {
+        return name + "FlowerSeed";
+    }
+
+    public String getSeedItemTextureName() {
         return "core:" + name + "FlowerSeed";
     }
 
     public Item getSeedItem() {
         return seedItem;
-    }
-
-    public String getSeedTextureName() {
-        return name + "FlowerSeed";
     }
 
     public Block getSoilBlock() {

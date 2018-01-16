@@ -9,7 +9,7 @@ public class BlockColoredFLowerCrop extends McExtrasBlockCrop {
     private final Colors colors;
 
     public BlockColoredFLowerCrop(Colors colors) {
-        super(colors.getCropBlockName(), colors.getCropTextureName());
+        super(colors.getCropBlockName(), colors.getCropBlockTextureName());
 
         this.colors = colors;
     }

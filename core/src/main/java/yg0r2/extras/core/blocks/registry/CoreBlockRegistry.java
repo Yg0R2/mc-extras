@@ -15,7 +15,7 @@ public final class CoreBlockRegistry extends BlockRegistry {
         McExtrasBlocks.GLOW_FLOWER = registerBlock(new BlockGlowFlower());
         McExtrasBlocks.GLOW_FLOWER_CROP = registerBlock(new BlockGlowFlowerCrop());
 
-        McExtrasBlocks.ORANGE_FLOWER = registerBlock(new BlockOrangeFlower());
+        McExtrasBlocks.ORANGE_FLOWER = registerBlock(new BlockColoredFlower(Colors.ORANGE));
         McExtrasBlocks.ORANGE_FLOWER_CROP = registerBlock(new BlockColoredFLowerCrop(Colors.ORANGE));
 
         McExtrasBlocks.RED_FLOWER_CROP = registerBlock(new BlockColoredFLowerCrop(Colors.RED));

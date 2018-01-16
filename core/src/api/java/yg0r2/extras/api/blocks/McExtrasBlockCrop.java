@@ -49,7 +49,7 @@ public abstract class McExtrasBlockCrop extends BlockCrops implements IPlantable
                 dropItems(world, x, y, z, itemDrop);
             }
 
-            world.setBlock(x, y, z, this, 0, 2);
+            return world.setBlock(x, y, z, this, 0, 2);
         }
 
         return false;
@@ -62,12 +62,14 @@ public abstract class McExtrasBlockCrop extends BlockCrops implements IPlantable
         if (blockMetadata == 7) {
             dropBlockAsItem(world, x, y, z, new ItemStack(getHarvestedSeedItem(), 1));
         }
+
+        world.setBlockToAir(x, y, z);
     }
 
     protected List<ItemDrop> getActivatedItemDrops() {
         return Arrays.asList(
             new ItemDrop(1, 2, new ItemStack(getHarvestedItem())),
-            new ItemDrop(0, 1, new ItemStack(getHarvestedSeedItem()))
+            new ItemDrop(1, 1, new ItemStack(getHarvestedSeedItem()))
         );
     }
 
