@@ -1,7 +1,7 @@
 package yg0r2.extras.core.items;
 
 import yg0r2.extras.api.items.McExtrasItemSeed;
-import yg0r2.extras.core.Colors;
+import yg0r2.extras.api.Colors;
 
 public class ItemColoredFlowerSeed extends McExtrasItemSeed {
 

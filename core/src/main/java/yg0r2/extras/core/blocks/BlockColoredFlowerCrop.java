@@ -2,7 +2,7 @@ package yg0r2.extras.core.blocks;
 
 import net.minecraft.item.Item;
 import yg0r2.extras.api.blocks.McExtrasBlockCrop;
-import yg0r2.extras.core.Colors;
+import yg0r2.extras.api.Colors;
 
 public class BlockColoredFlowerCrop extends McExtrasBlockCrop {
 

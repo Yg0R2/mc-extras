@@ -4,9 +4,9 @@ import forestry.api.apiculture.FlowerManager;
 import forestry.api.farming.Farmables;
 import forestry.farming.logic.FarmableGenericCrop;
 import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import yg0r2.extras.api.Colors;
 import yg0r2.extras.api.blocks.McExtrasBlocks;
 import yg0r2.extras.api.items.McExtrasItems;
 import yg0r2.extras.api.recipes.registry.RecipeRegistry;
@@ -21,14 +21,14 @@ public class ForestryRecipeRegistry extends RecipeRegistry {
         registerFlower(McExtrasBlocks.GLOW_FLOWER, FlowerManager.FlowerTypeNether);
         registerFarmable(McExtrasItems.GLOW_FLOWER_SEED, McExtrasBlocks.GLOW_FLOWER_CROP);
 
-        registerFlower(McExtrasBlocks.ORANGE_FLOWER, FlowerManager.FlowerTypeVanilla);
-        registerFarmable(McExtrasItems.ORANGE_FLOWER_SEED, McExtrasBlocks.ORANGE_FLOWER_CROP);
+        for (Colors colors : Colors.values()) {
+            if ((colors.getFlowerBlock() == null) || (colors.getSeedItem() == null) || (colors.getCropBlock() == null)) {
+                continue;
+            }
 
-        registerFlower(Blocks.red_flower, FlowerManager.FlowerTypeVanilla);
-        registerFarmable(McExtrasItems.RED_FLOWER_SEED, Blocks.red_flower);
-
-        registerFlower(Blocks.yellow_flower, FlowerManager.FlowerTypeVanilla);
-        registerFarmable(McExtrasItems.YELLOW_FLOWER_SEED, Blocks.yellow_flower);
+            registerFlower(colors.getFlowerBlock(), FlowerManager.FlowerTypeVanilla);
+            registerFarmable(colors.getSeedItem(), colors.getCropBlock());
+        }
     }
 
     private void registerFarmable(Item seedItem, Block cropBlock) {

@@ -3,7 +3,7 @@ package yg0r2.extras.core.recipes;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import yg0r2.extras.api.recipes.Recipe;
-import yg0r2.extras.core.Colors;
+import yg0r2.extras.api.Colors;
 
 public class ColoredDyeRecipe implements Recipe {
 

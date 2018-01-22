@@ -3,7 +3,7 @@ package yg0r2.extras.core.blocks.registry;
 import static yg0r2.extras.api.blocks.McExtrasBlocks.*;
 
 import yg0r2.extras.api.blocks.registry.BlockRegistry;
-import yg0r2.extras.core.Colors;
+import yg0r2.extras.api.Colors;
 import yg0r2.extras.core.blocks.*;
 
 public final class CoreBlockRegistry extends BlockRegistry {

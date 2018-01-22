@@ -3,7 +3,7 @@ package yg0r2.extras.core.blocks;
 import net.minecraft.item.ItemStack;
 import yg0r2.extras.api.blocks.McExtrasBlockFlower;
 import yg0r2.extras.api.domain.ItemDrop;
-import yg0r2.extras.core.Colors;
+import yg0r2.extras.api.Colors;
 
 import java.util.Arrays;
 import java.util.List;

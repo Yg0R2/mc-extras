@@ -1,4 +1,4 @@
-package yg0r2.extras.core;
+package yg0r2.extras.api;
 
 import static yg0r2.extras.api.blocks.McExtrasBlocks.*;
 import static yg0r2.extras.api.items.McExtrasItems.*;

@@ -3,7 +3,7 @@ package yg0r2.extras.core.items.registry;
 import static yg0r2.extras.api.items.McExtrasItems.*;
 
 import yg0r2.extras.api.items.registry.ItemRegistry;
-import yg0r2.extras.core.Colors;
+import yg0r2.extras.api.Colors;
 import yg0r2.extras.core.items.*;
 
 public final class CoreItemRegistry extends ItemRegistry {
