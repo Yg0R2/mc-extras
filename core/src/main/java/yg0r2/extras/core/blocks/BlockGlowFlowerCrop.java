@@ -12,7 +12,7 @@ import yg0r2.extras.api.items.McExtrasItems;
 public final class BlockGlowFlowerCrop extends McExtrasBlockCrop {
 
     public BlockGlowFlowerCrop() {
-        super("glowFlowerCrop", "core:glowFlowerCrop");
+        super("glowFlowerCrop", "core:glowFlowerCrop/glowFlowerCrop");
 
         setLightLevel(1.0F);
     }

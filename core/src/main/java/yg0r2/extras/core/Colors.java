@@ -45,7 +45,7 @@ public enum Colors {
     }
 
     public String getCropBlockTextureName() {
-        return "core:" + name + "FlowerCrop";
+        return "core:" + getCropBlockName() + "/" + getCropBlockName();
     }
 
     public ItemStack getDye() {

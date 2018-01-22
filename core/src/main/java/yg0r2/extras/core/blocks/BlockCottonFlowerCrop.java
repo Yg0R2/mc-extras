@@ -7,7 +7,7 @@ import yg0r2.extras.api.items.McExtrasItems;
 public final class BlockCottonFlowerCrop extends McExtrasBlockCrop {
 
     public BlockCottonFlowerCrop() {
-        super("cottonFlowerCrop", "core:cottonFlowerCrop");
+        super("cottonFlowerCrop", "core:cottonFlowerCrop/cottonFlowerCrop");
     }
 
     @Override
