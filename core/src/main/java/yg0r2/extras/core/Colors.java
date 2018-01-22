@@ -1,18 +1,24 @@
 package yg0r2.extras.core;
 
+import static yg0r2.extras.api.blocks.McExtrasBlocks.*;
+import static yg0r2.extras.api.items.McExtrasItems.*;
+
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import yg0r2.extras.api.blocks.McExtrasBlocks;
-import yg0r2.extras.api.items.McExtrasItems;
 
 public enum Colors {
 
-    ORANGE("orange", McExtrasBlocks.ORANGE_FLOWER, McExtrasItems.ORANGE_FLOWER_SEED, McExtrasBlocks.ORANGE_FLOWER_CROP, Blocks.farmland, new ItemStack(Items.dye, 8, 14)),
-    RED("red", Blocks.red_flower, McExtrasItems.RED_FLOWER_SEED, McExtrasBlocks.RED_FLOWER_CROP, Blocks.farmland, new ItemStack(Items.dye, 8, 1)),
-    YELLOW("yellow", Blocks.yellow_flower, McExtrasItems.YELLOW_FLOWER_SEED, McExtrasBlocks.YELLOW_FLOWER_CROP, Blocks.farmland, new ItemStack(Items.dye, 8, 11));
+    CYAN("cyan", CYAN_FLOWER, CYAN_FLOWER_SEED, CYAN_FLOWER_CROP, 6),
+    GREEN("green", Blocks.cactus, null, null, 2), // Only register green dye
+    MAGENTA("magenta", MAGENTA_FLOWER, MAGENTA_FLOWER_SEED, MAGENTA_FLOWER_CROP, 13),
+    ORANGE("orange", ORANGE_FLOWER, ORANGE_FLOWER_SEED, ORANGE_FLOWER_CROP, 14),
+    PURPLE("purple", PURPLE_FLOWER, PURPLE_FLOWER_SEED, PURPLE_FLOWER_CROP, 5),
+    RED("red", Blocks.red_flower, RED_FLOWER_SEED, RED_FLOWER_CROP, 1),
+    WHITE("white", WHITE_FLOWER, WHITE_FLOWER_SEED, WHITE_FLOWER_CROP, 15),
+    YELLOW("yellow", Blocks.yellow_flower, YELLOW_FLOWER_SEED, YELLOW_FLOWER_CROP, 11);
 
     private Block cropBlock;
     private ItemStack dye;
@@ -21,13 +27,13 @@ public enum Colors {
     private Item seedItem;
     private Block soilBlock;
 
-    Colors(String name, Block flowerBlock, Item seedItem, Block cropBlock, Block soilBlock, ItemStack dye) {
+    Colors(String name, Block flowerBlock, Item seedItem, Block cropBlock, int dyeIndex) {
         this.name = name;
         this.flowerBlock = flowerBlock;
         this.seedItem = seedItem;
         this.cropBlock = cropBlock;
-        this.soilBlock = soilBlock;
-        this.dye = dye;
+        this.soilBlock = Blocks.farmland;
+        this.dye = new ItemStack(Items.dye, 8, dyeIndex);
     }
 
     public Block getCropBlock() {

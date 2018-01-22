@@ -4,11 +4,11 @@ import net.minecraft.item.Item;
 import yg0r2.extras.api.blocks.McExtrasBlockCrop;
 import yg0r2.extras.core.Colors;
 
-public class BlockColoredFLowerCrop extends McExtrasBlockCrop {
+public class BlockColoredFlowerCrop extends McExtrasBlockCrop {
 
     private final Colors colors;
 
-    public BlockColoredFLowerCrop(Colors colors) {
+    public BlockColoredFlowerCrop(Colors colors) {
         super(colors.getCropBlockName(), colors.getCropBlockTextureName());
 
         this.colors = colors;

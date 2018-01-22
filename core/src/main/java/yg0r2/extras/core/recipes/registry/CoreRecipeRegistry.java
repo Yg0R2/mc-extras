@@ -11,14 +11,10 @@ public final class CoreRecipeRegistry extends RecipeRegistry {
         registerShapelessRecipe(new GlowStoneDustRecipe());
         registerShapelessRecipe(new GlowStoneFlowerSeedRecipe());
 
-        registerShapelessRecipe(new ColoredDyeRecipe(Colors.ORANGE));
-        registerShapelessRecipe(new ColoredFlowerSeedRecipe(Colors.ORANGE));
-
-        registerShapelessRecipe(new ColoredDyeRecipe(Colors.RED));
-        registerShapelessRecipe(new ColoredFlowerSeedRecipe(Colors.RED));
-
-        registerShapelessRecipe(new ColoredDyeRecipe(Colors.YELLOW));
-        registerShapelessRecipe(new ColoredFlowerSeedRecipe(Colors.YELLOW));
+        for (Colors color : Colors.values()) {
+            registerShapelessRecipe(new ColoredDyeRecipe(color));
+            registerShapelessRecipe(new ColoredFlowerSeedRecipe(color));
+        }
     }
 
 }

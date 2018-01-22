@@ -1,19 +1,31 @@
 # Blocks
 tile.cottonFlower.name=Cotton Flower
 tile.cottonFlowerCrop.name=Cotton Flower Crop
+tile.cyanFlower.name=Cyan Flower
+tile.cyanFlowerCrop.name=Cyan Flower Crop
 tile.glowFlower.name=Glow Flower
 tile.glowFlowerCrop.name=Glow Flower Crop
+tile.magentaFlower.name=Magenta Flower
+tile.magentaFlowerCrop.name=Magenta Flower Crop
 tile.orangeFlower.name=Orange Flower
 tile.orangeFlowerCrop.name=Orange Flower Crop
+tile.purpleFlower.name=Purple Flower
+tile.purpleFlowerCrop.name=Purple Flower Crop
 tile.redFlowerCrop.name=Red Flower Crop
+tile.whiteFlower.name=White Flower
+tile.whiteFlowerCrop.name=White Flower Crop
 tile.yellowFlowerCrop.name=Yellow Flower Crop
 
 # Items
 item.cotton.name=Cotton
 item.cottonFlowerSeed.name=Cotton Flower Seed
+item.cyanFlowerSeed.name=Cyan Flower Seed
 item.glowFlowerSeed.name=Glow Flower Seed
+item.magentaFlowerSeed.name=Magenta Flower Seed
 item.orangeFlowerSeed.name=Orange Flower Seed
+item.purpleFlowerSeed.name=Purple Flower Seed
 item.redFlowerSeed.name=Red Flower Seed
+item.whiteFlowerSeed.name=White Flower Seed
 item.yellowFlowerSeed.name=Yellow Flower Seed
 
 # Tab

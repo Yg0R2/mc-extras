@@ -1,6 +1,7 @@
 package yg0r2.extras.core.items.registry;
 
-import yg0r2.extras.api.items.McExtrasItems;
+import static yg0r2.extras.api.items.McExtrasItems.*;
+
 import yg0r2.extras.api.items.registry.ItemRegistry;
 import yg0r2.extras.core.Colors;
 import yg0r2.extras.core.items.*;
@@ -9,16 +10,24 @@ public final class CoreItemRegistry extends ItemRegistry {
 
     @Override
     public void registerItems() {
-        McExtrasItems.COTTON = registerItem(new ItemCotton());
-        McExtrasItems.COTTON_FLOWER_SEED = registerItem(new ItemCottonSeeds());
+        COTTON = registerItem(new ItemCotton());
+        COTTON_FLOWER_SEED = registerItem(new ItemCottonSeeds());
 
-        McExtrasItems.GLOW_FLOWER_SEED = registerItem(new ItemGlowFlowerSeeds());
+        CYAN_FLOWER_SEED = registerItem(new ItemColoredFlowerSeed(Colors.CYAN));
 
-        McExtrasItems.ORANGE_FLOWER_SEED = registerItem(new ItemColoredFlowerSeed(Colors.ORANGE));
+        GLOW_FLOWER_SEED = registerItem(new ItemGlowFlowerSeeds());
 
-        McExtrasItems.RED_FLOWER_SEED = registerItem(new ItemColoredFlowerSeed(Colors.RED));
+        MAGENTA_FLOWER_SEED = registerItem(new ItemColoredFlowerSeed(Colors.MAGENTA));
 
-        McExtrasItems.YELLOW_FLOWER_SEED = registerItem(new ItemColoredFlowerSeed(Colors.YELLOW));
+        ORANGE_FLOWER_SEED = registerItem(new ItemColoredFlowerSeed(Colors.ORANGE));
+
+        PURPLE_FLOWER_SEED = registerItem(new ItemColoredFlowerSeed(Colors.PURPLE));
+
+        RED_FLOWER_SEED = registerItem(new ItemColoredFlowerSeed(Colors.RED));
+
+        WHITE_FLOWER_SEED = registerItem(new ItemColoredFlowerSeed(Colors.WHITE));
+
+        YELLOW_FLOWER_SEED = registerItem(new ItemColoredFlowerSeed(Colors.YELLOW));
     }
 
 }
