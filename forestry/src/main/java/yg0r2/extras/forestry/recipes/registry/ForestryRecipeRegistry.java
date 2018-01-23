@@ -14,7 +14,7 @@ import yg0r2.extras.api.recipes.registry.RecipeRegistry;
 public class ForestryRecipeRegistry extends RecipeRegistry {
 
     @Override
-    public void registerRecipes() {
+    public void register() {
         registerFlower(McExtrasBlocks.COTTON_FLOWER, FlowerManager.FlowerTypeVanilla);
         registerFarmable(McExtrasItems.COTTON_FLOWER_SEED, McExtrasBlocks.COTTON_FLOWER_CROP);
 

@@ -7,7 +7,7 @@ import yg0r2.extras.core.recipes.*;
 public final class CoreRecipeRegistry extends RecipeRegistry {
 
     @Override
-    public void registerRecipes() {
+    public void register() {
         registerShapelessRecipe(new GlowStoneDustRecipe());
         registerShapelessRecipe(new GlowStoneFlowerSeedRecipe());
 

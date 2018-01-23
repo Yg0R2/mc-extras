@@ -24,9 +24,9 @@ public class McExtrasCoreMod {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        new CoreBlockRegistry().registerBlocks();
-        new CoreItemRegistry().registerItems();
-        new CoreRecipeRegistry().registerRecipes();
+        new CoreBlockRegistry().register();
+        new CoreItemRegistry().register();
+        new CoreRecipeRegistry().register();
     }
 
     @Mod.EventHandler

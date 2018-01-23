@@ -24,7 +24,7 @@ public final class McExtrasForestryMod {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-        new ForestryRecipeRegistry().registerRecipes();
+        new ForestryRecipeRegistry().register();
     }
 
     @Mod.EventHandler

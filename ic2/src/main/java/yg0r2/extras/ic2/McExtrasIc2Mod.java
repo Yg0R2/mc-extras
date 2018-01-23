@@ -20,7 +20,7 @@ public final class McExtrasIc2Mod {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        (new Ic2RecipeRegistry()).registerRecipes();
+        (new Ic2RecipeRegistry()).register();
     }
 
     @Mod.EventHandler

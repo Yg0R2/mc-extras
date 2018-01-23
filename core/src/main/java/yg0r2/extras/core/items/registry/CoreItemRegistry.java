@@ -9,7 +9,7 @@ import yg0r2.extras.core.items.*;
 public final class CoreItemRegistry extends ItemRegistry {
 
     @Override
-    public void registerItems() {
+    public void register() {
         COTTON = registerItem(new ItemCotton());
         COTTON_FLOWER_SEED = registerItem(new ItemCottonSeeds());
 

@@ -9,7 +9,7 @@ import yg0r2.extras.core.blocks.*;
 public final class CoreBlockRegistry extends BlockRegistry {
 
     @Override
-    public void registerBlocks() {
+    public void register() {
         COTTON_FLOWER = registerBlock(new BlockCottonFlower());
         COTTON_FLOWER_CROP = registerBlock(new BlockCottonFlowerCrop());
 
