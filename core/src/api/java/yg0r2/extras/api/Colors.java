@@ -61,7 +61,7 @@ public enum Colors {
     }
 
     public String getFlowerBlockTextureName() {
-        return "core:" + name + "Flower";
+        return "core:" + getFlowerBlockName();
     }
 
     public String getSeedItemName() {
@@ -69,7 +69,7 @@ public enum Colors {
     }
 
     public String getSeedItemTextureName() {
-        return "core:" + name + "FlowerSeed";
+        return "core:" + getSeedItemName();
     }
 
     public Item getSeedItem() {
